@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ConselhoMunicipal de Saúde</title>
+
+    <!-- Link para o arquivo CSS externo -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+
+<body>
+
+
+    <!-- form identifica um formulário -->
+    <form id="formulario-login" class="formulario-login" method="post">
+
+        <div class="cabecalho-login">
+                <img src="assets/emblema-pmf-cms.png" alt="Prefeitura de Florianópolis" class="logo-login">
+
+            <h1 class="titulo-login">Conselho Municipal de Saúde</h1>
+        </div>
+
+        <!-- Campo para o CPF -->
+        <div class="campo">
+
+            <input type="text" id="cpf" name="cpf" placeholder="digite seu CPF">
+
+        </div>
+
+
+        <!-- Campo para a senha -->
+        <div class="campo">
+
+            <div class="senha-container">
+                <input type="password" id="password" name="senha" placeholder="digite sua senha">
+
+                <button
+            type="button"
+            id="alternar-senha"
+            class="alternar-senha"
+            aria-label="Mostrar senha"
+        >👁</button>
+            
+        </div>
+
+
+        <!-- Botão de envio do formulário -->
+        <div class="acoes-login">
+            <button type="reset" id="limpar">Limpar</button>
+            <button type="submit" id="entrar">ENTRAR</button>
+        </div>
+
+
+        <!-- Local onde o JavaScript poderá mostrar erros -->
+        <p id="mensagem-erro" class="mensagem-erro" role="alert"></p>
+
+        <p class="ajuda-login">Dúvidas? <span class="texto-ajuda">CONFIRA AQUI</span></p>
+
+    </form>
+
+
+    <!-- Arquivo JavaScript -->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
