@@ -6,10 +6,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>ConselhoMunicipal de Saúde</title>
+    <title>Conselho Municipal de Saúde</title>
 
     <!-- Link para o arquivo CSS externo -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="assets/brasao-pmf.png">
 </head>
 
 
@@ -20,15 +21,23 @@
     <form id="formulario-login" class="formulario-login" method="post">
 
         <div class="cabecalho-login">
-                <img src="assets/emblema-pmf-cms.png" alt="Prefeitura de Florianópolis" class="logo-login">
-
-            <h1 class="titulo-login">Conselho Municipal de Saúde</h1>
+            <img
+                src="assets/emblema-pmf-cms.png"
+                alt="Prefeitura de Florianópolis"
+                class="logo-login"
+            >
         </div>
+
 
         <!-- Campo para o CPF -->
         <div class="campo">
 
-            <input type="text" id="cpf" name="cpf" placeholder="digite seu CPF">
+            <input
+                type="text"
+                id="cpf"
+                name="cpf"
+                placeholder="digite seu CPF"
+            >
 
         </div>
 
@@ -37,31 +46,157 @@
         <div class="campo">
 
             <div class="senha-container">
-                <input type="password" id="password" name="senha" placeholder="digite sua senha">
+
+                <input
+                    type="password"
+                    id="password"
+                    name="senha"
+                    placeholder="digite sua senha"
+                >
 
                 <button
-            type="button"
-            id="alternar-senha"
-            class="alternar-senha"
-            aria-label="Mostrar senha"
-        >👁</button>
-            
+                    type="button"
+                    id="alternar-senha"
+                    class="alternar-senha"
+                    aria-label="Mostrar senha"
+                >
+                    👁
+                </button>
+
+            </div>
+
         </div>
 
 
         <!-- Botão de envio do formulário -->
         <div class="acoes-login">
-            <button type="reset" id="limpar">Limpar</button>
-            <button type="submit" id="entrar">ENTRAR</button>
+
+            <button
+                type="reset"
+                id="limpar"
+            >
+                Limpar
+            </button>
+
+            <button
+                type="submit"
+                id="entrar"
+            >
+                ENTRAR
+            </button>
+
         </div>
 
 
         <!-- Local onde o JavaScript poderá mostrar erros -->
-        <p id="mensagem-erro" class="mensagem-erro" role="alert"></p>
+        <p
+            id="mensagem-erro"
+            class="mensagem-erro"
+            role="alert"
+        ></p>
 
-        <p class="ajuda-login">Dúvidas? <span class="texto-ajuda">CONFIRA AQUI</span></p>
+
+        <p class="ajuda-login">
+            Precisa de ajuda?
+
+            <button
+                type="button"
+                id="abrir-ajuda"
+                class="texto-ajuda"
+            >
+                Consulte as dúvidas frequentes
+            </button>
+        </p>
 
     </form>
+
+
+    <!-- Janela de ajuda -->
+    <dialog
+        id="janela-ajuda"
+        aria-labelledby="titulo-ajuda"
+    >
+
+        <h2 id="titulo-ajuda">
+            Ajuda para acessar
+        </h2>
+
+
+        <!-- Conteúdo da janela de ajuda -->
+        <details>
+
+            <summary>
+                Como preencher o CPF?
+            </summary>
+
+            <p>
+                Digite os 11 números do seu CPF, sem pontos ou traços.
+            </p>
+
+        </details>
+
+
+        <details>
+
+            <summary>
+                Como conferir a senha digitada?
+            </summary>
+
+            <p>
+                Clique no ícone de olho dentro do campo de senha.
+                Clique novamente para ocultar os caracteres.
+            </p>
+
+        </details>
+
+
+        <details>
+
+            <summary>
+                Para que serve o botão Limpar?
+            </summary>
+
+            <p>
+                Ele apaga os campos preenchidos e remove os avisos de erro
+                para você começar novamente.
+            </p>
+
+        </details>
+
+
+        <details>
+
+            <summary>
+                O que fazer se esquecer a senha?
+            </summary>
+
+            <p>
+                Entre em contato com a equipe de Tecnologia e Inovação
+                para solicitar a redefinição da sua senha.
+            </p>
+
+            <p>
+                <strong>E-mail:</strong>
+
+                <a
+                    href="https://mail.google.com/mail/?view=cm&fs=1&to=inovacao.sms@floripa.sc.gov.br"
+                    target="_blank"
+                >
+                    inovacao.sms@floripa.sc.gov.br
+                </a>
+            </p>
+
+        </details>
+
+
+        <button
+            type="button"
+            id="fechar-ajuda"
+        >
+            Fechar
+        </button>
+
+    </dialog>
 
 
     <!-- Arquivo JavaScript -->
