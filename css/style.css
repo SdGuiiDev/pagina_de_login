@@ -32,16 +32,14 @@ h1 {
 
 .formulario-login {
     width: 90%;
-    max-width: 340px;
     box-sizing: border-box;
-
     margin: 0;
     padding: 32px 24px;
-
-    background-color: #181c1b;
-    color: #e8dec9;
-
-    border-radius: 4px;
+    max-width: 380px;
+    background-color: black;
+    border: 1px solid white;
+    border-radius: 12px;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.30);
 }
 
 
@@ -51,12 +49,10 @@ h1 {
 
 .logo-login {
     display: block;
-
-    width: 220px;
+    width: 180px;
     max-width: 100%;
-    height: auto;
-
-    margin: 0 auto 16px;
+    height:  auto;
+    margin: 0 auto;
 }
 
 
@@ -138,7 +134,7 @@ button {
     padding: 0;
 
     background-color: transparent;
-    color: #1d4ed8;
+    color: white;
 
     font-size: 20px;
 }
@@ -180,14 +176,15 @@ button {
 
 #entrar {
     flex: 2;
-}
+    color: #062838;
+    border: none;
+    }
 
 
 #limpar {
     background-color: transparent;
-    color: #e8dec9;
-
-    border: 2px solid #465052;
+    color: #dce7f1;
+    border: 1px solid #6b8296;
 }
 
 
@@ -196,12 +193,12 @@ button {
 ========================= */
 
 #entrar:hover {
-    background-color: #007f9e;
+    background-color: #2bd0ef;
 }
 
 
 #limpar:hover {
-    background-color: #283231;
+    background-color: #1b3449;
 }
 
 
@@ -233,32 +230,26 @@ button {
 ========================= */
 
 .ajuda-login {
-    margin-top: 32px;
-    margin-bottom: 0;
-
+    margin: 24px 0 0;
+    padding-top: 20px;
+    border-top: 1px solid #304659;
     text-align: center;
-
     font-size: 14px;
-    line-height: 1.5;
-
-    color: #e8dec9;
+    line-height: 1.6;
+    color: #b1c0ce;
 }
 
-
 .ajuda-login .texto-ajuda {
-    width: auto;
-
+    display: block;
+    width: 100%;
     padding: 0;
-
     border: none;
-
     background-color: transparent;
-    color: #00b6dc;
-
+    color: #54d9f1;
     font: inherit;
     text-decoration: underline;
-
     cursor: pointer;
+    margin-top: 6px;
 }
 
 
@@ -331,4 +322,28 @@ button {
 #janela-ajuda summary:focus-visible {
     outline: 2px solid #00b6dc;
     outline-offset: 4px;
+}
+
+
+
+#cpf,
+#password,
+.acoes-login button {
+    box-sizing: border-box;
+    height: 48px;
+    border-radius: 1px;
+}
+
+
+#cpf,
+#password {
+    background-color: transparent;
+    color: #f1f5f9;
+    border: 1px solid;
+}
+
+#cpf::placeholder,
+#password::placeholder {
+    color: #b1c0ce;
+    opacity: 1;
 }
